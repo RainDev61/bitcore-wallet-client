@@ -1891,7 +1891,7 @@ var $ = require('preconditions').singleton();
 var Utils = {};
 
 var _UNITS = {
-  btc: {
+  start: {
     toSatoshis: 100000000,
     decimals: 6
   },
