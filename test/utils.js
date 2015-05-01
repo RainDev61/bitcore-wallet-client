@@ -15,7 +15,7 @@ describe('Utils', function() {
         args: [1, 'bit'],
         expected: '0',
       }, {
-        args: [1, 'btc'],
+        args: [1, 'start'],
         expected: '0.000000',
       }, {
         args: [0, 'bit'],
@@ -24,13 +24,13 @@ describe('Utils', function() {
         args: [12345678, 'bit'],
         expected: '123,457',
       }, {
-        args: [12345678, 'btc'],
+        args: [12345678, 'start'],
         expected: '0.123457',
       }, {
-        args: [12345611, 'btc'],
+        args: [12345611, 'start'],
         expected: '0.123456',
       }, {
-        args: [1234567899999, 'btc'],
+        args: [1234567899999, 'start'],
         expected: '12,345.679000',
       }, {
         args: [12345678, 'bit', {
@@ -38,12 +38,12 @@ describe('Utils', function() {
         }],
         expected: '123.457',
       }, {
-        args: [12345678, 'btc', {
+        args: [12345678, 'start', {
           decimalSeparator: ','
         }],
         expected: '0,123457',
       }, {
-        args: [1234567899999, 'btc', {
+        args: [1234567899999, 'start', {
           thousandsSeparator: ' ',
           decimalSeparator: ','
         }],
