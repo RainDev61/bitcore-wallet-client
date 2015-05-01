@@ -35,7 +35,7 @@
     "uglify": "^0.1.1"
   },
   "devDependencies": {
-    "bitcore-wallet-service": "git://github.com/startcoin-project/bitcore-wallet-service.git#1e06777aa5e03dce6495a55f581a42f752473a7e",
+    "bitcore-wallet-service": "git://github.com/startcoin-project/bitcore-wallet-service.git#4d65f4f3ca41ca345f99485088bbfe79842364fb",
     "chai": "^1.9.1",
     "grunt-jsdoc": "^0.5.8",
     "http": "0.0.0",
