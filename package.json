@@ -2,7 +2,7 @@
   "name": "bitcore-wallet-client",
   "description": "Client for bitcore-wallet-service",
   "author": "BitPay Inc",
-  "version": "0.0.32",
+  "version": "0.0.37",
   "keywords": [
     "bitcoin",
     "copay",
@@ -13,7 +13,7 @@
   ],
   "main": "index.js",
   "repository": {
-    "url": "git@github.com:startcoin-project/bitcore-wallet-client.git",
+    "url": "git@github.com:bitpay/bitcore-wallet-client.git",
     "type": "git"
   },
   "bugs": {
@@ -22,11 +22,10 @@
   "dependencies": {
     "async": "^0.9.0",
     "bitcore": "git://github.com/startcoin-project/bitcore.git",
-    "bitcore-payment-protocol": "0.10.2",
-    "bitcore-wallet-utils": "git://github.com/startcoin-project/bitcore-wallet-utils.git",
+    "bitcore-payment-protocol": "git://github.com/startcoin-project/bitcore-payment-protocol.git",
+    "bitcore-wallet-utils": git://github.com/startcoin-project/bitcore-wallet-utils.git",
     "browser-request": "^0.3.3",
     "browserify": "^9.0.3",
-    "coveralls": "^2.11.2",
     "lodash": "^3.3.1",
     "preconditions": "^1.0.8",
     "request": "^2.53.0",
@@ -37,17 +36,16 @@
   "devDependencies": {
     "bitcore-wallet-service": "git://github.com/startcoin-project/bitcore-wallet-service.git",
     "chai": "^1.9.1",
+    "coveralls": "^2.11.2",
     "grunt-jsdoc": "^0.5.8",
     "http": "0.0.0",
     "https": "^1.0.0",
     "istanbul": "*",
     "jsdoc": "^3.3.0-beta1",
-    "leveldown": "^0.10.0",
-    "levelup": "^0.19.0",
-    "memdown": "^1.0.0",
     "mocha": "^1.18.2",
     "sinon": "^1.10.3",
-    "supertest": "*"
+    "supertest": "*",
+    "tingodb": "^0.3.4"
   },
   "scripts": {
     "start": "node app.js",
