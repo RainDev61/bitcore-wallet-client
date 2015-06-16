@@ -21,9 +21,9 @@
   },
   "dependencies": {
     "async": "^0.9.0",
-    "bitcore": "git://github.com/startcoin-project/bitcore.git#d36d6c00d77ef5ac998b6588e1671689b3b8658f",
+    "bitcore": "git://github.com/startcoin-project/bitcore.git",
     "bitcore-payment-protocol": "0.10.2",
-    "bitcore-wallet-utils": "git://github.com/startcoin-project/bitcore-wallet-utils.git#e0065090cea2a1972caab1bd1f1a049d37a178b4",
+    "bitcore-wallet-utils": "git://github.com/startcoin-project/bitcore-wallet-utils.git",
     "browser-request": "^0.3.3",
     "browserify": "^9.0.3",
     "coveralls": "^2.11.2",
@@ -35,7 +35,7 @@
     "uglify": "^0.1.1"
   },
   "devDependencies": {
-    "bitcore-wallet-service": "git://github.com/startcoin-project/bitcore-wallet-service.git#039d00860e6a44a6ce7b26a5174ca393ac263e10",
+    "bitcore-wallet-service": "git://github.com/startcoin-project/bitcore-wallet-service.git",
     "chai": "^1.9.1",
     "grunt-jsdoc": "^0.5.8",
     "http": "0.0.0",
