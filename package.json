@@ -13,7 +13,7 @@
   ],
   "main": "index.js",
   "repository": {
-    "url": "git@github.com:bitpay/bitcore-wallet-client.git",
+    "url": "git@github.com:startcoin-project/bitcore-wallet-client.git",
     "type": "git"
   },
   "bugs": {
