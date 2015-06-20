@@ -145,12 +145,12 @@ describe('paypro', function() {
 
   it('Create a PP payment', function() {
     var data = TestData.payProData;
-    var payment = PayPro._createPayment(data.merchant_data, '12ab1234', 'mwRGmB4NE3bG4EbXJKTHf8uvodoUtMCRhZ', 100);
+    var payment = PayPro._createPayment(data.merchant_data, '12ab1234', 'sLfMksuMC7Z1BnRnfhfdXVgb4FDKo2xrDg', 100);
     var s = '';
     for (var i = 0; i < payment.length; i++) {
       s += payment[i].toString(16);
     }
-    s.should.equal('a4c7b22696e766f6963654964223a22436962454a4a74473174394837374b6d4d3631453274222c226d65726368616e744964223a22444766754344656f66556e576a446d5537454c634568227d12412ab12341a1b8641217a914ae6eeec7e05624db748f9c16cce6fb53696ab3987');
+    s.should.equal('a4c7b22696e766f6963654964223a22436962454a4a74473174394837374b6d4d3631453274222c226d65726368616e744964223a22444766754344656f66556e576a446d5537454c634568227d12412ab12341a1b8641217a9141a784bca6dc6201edb805da617e5a951695d5ec87');
   });
 
   it('Send a PP payment (browser)', function(done) {
@@ -158,7 +158,7 @@ describe('paypro', function() {
     var opts = {
       merchant_data: data.merchant_data,
       rawTx: '12ab1234',
-      refundAddr: 'mwRGmB4NE3bG4EbXJKTHf8uvodoUtMCRhZ',
+      refundAddr: 'sLfMksuMC7Z1BnRnfhfdXVgb4FDKo2xrDg',
       amountSat: 100,
       url: 'http://an.url.com/paypro',
       xhr: xhr,
@@ -176,7 +176,7 @@ describe('paypro', function() {
     var opts = {
       merchant_data: data.merchant_data,
       rawTx: '12ab1234',
-      refundAddr: 'mwRGmB4NE3bG4EbXJKTHf8uvodoUtMCRhZ',
+      refundAddr: 'sLfMksuMC7Z1BnRnfhfdXVgb4FDKo2xrDg',
       amountSat: 100,
       httpNode: httpNode,
       url: 'http://an.url.com/paypro',

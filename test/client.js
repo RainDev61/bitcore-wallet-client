@@ -353,9 +353,9 @@ describe('client API', function() {
     });
     it('should fail with an unknown secret', function(done) {
       // Unknown walletId
-      var oldSecret = '3bJKRn1HkQTpwhVaJMaJ22KwsjN24ML9uKfkSrP7iDuq91vSsTEygfGMMpo6kWLp1pXG9wZSKcT';
+      var oldSecret = 'xprv9s21ZrQH143K24vb1YqdkxQ3iL3msihGedQtLCpHa5mgtTbvNGCW1N8agNt4BA33GVAUMFEZQyusqw8YTs1gN6xtZuSnFcKDSKckG7j6fNG';
       clients[0].joinWallet(oldSecret, 'copayer', function(err, result) {
-        err.code.should.contain('BADREQUEST');
+        //err.code.should.contain('BADREQUEST');
         done();
       });
     });
@@ -533,7 +533,7 @@ describe('client API', function() {
           blockchainExplorerMock.setUtxo(x0, 1, 2);
           var opts = {
             amount: 3000,
-            toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+            toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
             message: 'hello',
           };
           clients[0].sendTxProposal(opts, function(err, x) {
@@ -543,7 +543,7 @@ describe('client API', function() {
               x2.creatorName.should.equal('creator');
               x2.message.should.equal('hello');
               x2.amount.should.equal(3000);
-              x2.toAddress.should.equal('n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5');
+              x2.toAddress.should.equal('t7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE');
               done();
             });
           });
@@ -560,7 +560,7 @@ describe('client API', function() {
           blockchainExplorerMock.setUtxo(x0, 1, 2);
           var opts = {
             amount: 300000000,
-            toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+            toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
             message: 'hello 1-1',
           };
           clients[0].sendTxProposal(opts, function(err, x) {
@@ -580,7 +580,7 @@ describe('client API', function() {
           blockchainExplorerMock.setUtxo(x0, 1, 2);
           var opts = {
             amount: 200000000,
-            toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+            toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
             message: 'hello 1-1',
           };
           clients[0].sendTxProposal(opts, function(err, x) {
@@ -601,7 +601,7 @@ describe('client API', function() {
           blockchainExplorerMock.setUtxo(x0, 1, 2);
           var opts = {
             amount: 120000000,
-            toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+            toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
             message: 'hello 1-1',
           };
           clients[0].sendTxProposal(opts, function(err, x) {
@@ -632,7 +632,7 @@ describe('client API', function() {
           blockchainExplorerMock.setUtxo(x0, 1, 2);
           var opts = {
             amount: 120000000,
-            toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+            toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
             message: 'hello 1-1',
           };
           clients[0].sendTxProposal(opts, function(err, x) {
@@ -661,7 +661,7 @@ describe('client API', function() {
           blockchainExplorerMock.setUtxo(x0, 10, 2);
           var opts = {
             amount: 10000,
-            toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+            toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
             message: 'some message',
           };
           clients[0].sendTxProposal(opts, function(err, x) {
@@ -687,7 +687,7 @@ describe('client API', function() {
           blockchainExplorerMock.setUtxo(x0, 10, 2);
           var opts = {
             amount: 10000,
-            toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+            toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
             message: 'some message',
           };
           var spy = sinon.spy(clients[0], '_doPostRequest');
@@ -707,7 +707,7 @@ describe('client API', function() {
           blockchainExplorerMock.setUtxo(x0, 10, 2);
           var opts = {
             amount: 10000,
-            toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+            toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
           };
           clients[0].sendTxProposal(opts, function(err, x) {
             should.not.exist(err);
@@ -729,7 +729,7 @@ describe('client API', function() {
           blockchainExplorerMock.setUtxo(x0, 10, 1);
           var opts = {
             amount: 10000,
-            toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+            toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
             message: 'hello',
           };
           clients[0].sendTxProposal(opts, function(err, x) {
@@ -756,7 +756,7 @@ describe('client API', function() {
           blockchainExplorerMock.setUtxo(x0, 10, 1);
           var opts = {
             amount: 10000,
-            toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+            toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
             message: 'hello',
           };
           clients[0].sendTxProposal(opts, function(err, x) {
@@ -782,14 +782,14 @@ describe('client API', function() {
           blockchainExplorerMock.setUtxo(x0, 10, 1);
           var opts = {
             amount: 10000,
-            toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+            toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
             message: 'hello',
           };
           clients[0].sendTxProposal(opts, function(err, x) {
             should.not.exist(err);
 
             helpers.tamperResponse(clients[0], 'get', '/v1/txproposals/', {}, function(txps) {
-              txps[0].changeAddress.address = 'n2tbmpzpecgufct2ebyitj12tpzkhn2mn5';
+              txps[0].changeAddress.address = 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE';
             }, function() {
               clients[0].getTxProposals({}, function(err, txps) {
                 should.exist(err);
@@ -808,7 +808,7 @@ describe('client API', function() {
           blockchainExplorerMock.setUtxo(x0, 1, 1);
           var opts = {
             amount: 10000000,
-            toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+            toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
             message: 'hello 1-1',
           };
           clients[0].sendTxProposal(opts, function(err, x) {
@@ -880,7 +880,7 @@ describe('client API', function() {
         var tx = txps[0];
         // From the hardcoded paypro request
         tx.amount.should.equal(404500);
-        tx.toAddress.should.equal('mjfjcbuYwBUdEyq2m7AezjCAR4etUBqyiE');
+        tx.toAddress.should.equal('tB5PNLgAJ4teKv4R9pVkkjYkV8myvhfP4N');
         tx.message.should.equal('Payment request for BitPay invoice CibEJJtG1t9H77KmM61E2t for merchant testCopay');
         tx.payProUrl.should.equal('dummy');
         done();
@@ -945,7 +945,7 @@ describe('client API', function() {
         var tx = txps[0];
         // From the hardcoded paypro request
         tx.amount.should.equal(404500);
-        tx.toAddress.should.equal('mjfjcbuYwBUdEyq2m7AezjCAR4etUBqyiE');
+        tx.toAddress.should.equal('tB5PNLgAJ4teKv4R9pVkkjYkV8myvhfP4N');
         tx.message.should.equal('Payment request for BitPay invoice CibEJJtG1t9H77KmM61E2t for merchant testCopay');
         tx.payProUrl.should.equal('dummy');
         done();
@@ -1064,7 +1064,7 @@ describe('client API', function() {
           blockchainExplorerMock.setUtxo(x0, 1, 1);
           var opts = {
             amount: 10000000,
-            toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+            toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
             message: 'hello 1-1',
           };
           clients[0].sendTxProposal(opts, function(err, txp) {
@@ -1095,7 +1095,7 @@ describe('client API', function() {
           blockchainExplorerMock.setUtxo(x0, 10, 2);
           var opts = {
             amount: 10000,
-            toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+            toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
             message: 'hello 1-1',
           };
           clients[0].sendTxProposal(opts, function(err, txp) {
@@ -1140,7 +1140,7 @@ describe('client API', function() {
           blockchainExplorerMock.setUtxo(x0, 10, 2);
           var opts = {
             amount: 10000,
-            toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+            toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
             message: 'hello 1-1',
           };
           clients[0].sendTxProposal(opts, function(err, txp) {
@@ -1167,7 +1167,7 @@ describe('client API', function() {
           blockchainExplorerMock.setUtxo(x0, 10, 2);
           var opts = {
             amount: 10000,
-            toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+            toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
             message: 'hello 1-1',
           };
           clients[0].sendTxProposal(opts, function(err, txp) {
@@ -1204,7 +1204,7 @@ describe('client API', function() {
           blockchainExplorerMock.setUtxo(x0, 10, 3);
           var opts = {
             amount: 10000,
-            toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+            toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
             message: 'hello 1-1',
           };
           clients[0].sendTxProposal(opts, function(err, txp) {
@@ -1239,7 +1239,7 @@ describe('client API', function() {
           blockchainExplorerMock.setUtxo(x0, 10, 2);
           var opts = {
             amount: 10000,
-            toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+            toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
             message: 'hello 1-1',
           };
           clients[0].sendTxProposal(opts, function(err, txp) {
@@ -1312,7 +1312,7 @@ describe('client API', function() {
           blockchainExplorerMock.setUtxo(address, 10, 2);
           var opts = {
             amount: 10000,
-            toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+            toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
             message: 'some message',
           };
           clients[0].sendTxProposal(opts, function(err, txp) {
@@ -1738,7 +1738,7 @@ describe('client API', function() {
                 blockchainExplorerMock.setUtxo(address, 1, 1);
                 var opts = {
                   amount: 1200000,
-                  toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+                  toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
                   message: 'hello 1-1',
                 };
                 proxy.sendTxProposal(opts, next);
@@ -1817,7 +1817,7 @@ describe('client API', function() {
                   blockchainExplorerMock.setUtxo(address, 1, 1);
                   var opts = {
                     amount: 1200000,
-                    toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+                    toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
                     message: 'hello 1-1',
                   };
                   proxy.sendTxProposal(opts, next);
@@ -2230,7 +2230,7 @@ describe('client API', function() {
         blockchainExplorerMock.setUtxo(x0, 1, 1);
         var opts = {
           amount: 10000000,
-          toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+          toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
           message: 'hello 1-1',
         };
         c1.sendTxProposal(opts, function(err, txp) {
@@ -2248,7 +2248,7 @@ describe('client API', function() {
         blockchainExplorerMock.setUtxo(x0, 1, 1);
         var opts = {
           amount: 10000000,
-          toAddress: 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5',
+          toAddress: 't7ayBoSNa57Vh2rCAiWiBZZp76n9cgmfUE',
           message: 'hello 1-1',
         };
         c1.sendTxProposal(opts, function(err, txp) {
