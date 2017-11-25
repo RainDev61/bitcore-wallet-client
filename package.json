@@ -13,17 +13,17 @@
   ],
   "main": "index.js",
   "repository": {
-    "url": "git@github.com:startcoin-project/bitcore-wallet-client.git",
+    "url": "git@github.com:RainDev61/bitcore-wallet-client.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/startcoin-project/bitcore-wallet-client/issues"
+    "url": "https://github.com/RainDev61/bitcore-wallet-client/issues"
   },
   "dependencies": {
     "async": "^0.9.0",
-    "bitcore": "git://github.com/startcoin-project/bitcore.git",
-    "bitcore-payment-protocol": "git://github.com/startcoin-project/bitcore-payment-protocol.git",
-    "bitcore-wallet-utils": "git://github.com/startcoin-project/bitcore-wallet-utils.git",
+    "bitcore": "git://github.com/RainDev61/bitcore.git",
+    "bitcore-payment-protocol": "git://github.com/RainDev61/bitcore-payment-protocol.git",
+    "bitcore-wallet-utils": "git://github.com/RainDev61/bitcore-wallet-utils.git",
     "browser-request": "^0.3.3",
     "browserify": "^9.0.3",
     "lodash": "^3.3.1",
@@ -34,7 +34,7 @@
     "uglify": "^0.1.1"
   },
   "devDependencies": {
-    "bitcore-wallet-service": "git://github.com/startcoin-project/bitcore-wallet-service.git",
+    "bitcore-wallet-service": "git://github.com/RainDev61/bitcore-wallet-service.git",
     "chai": "^1.9.1",
     "coveralls": "^2.11.2",
     "grunt-jsdoc": "^0.5.8",
